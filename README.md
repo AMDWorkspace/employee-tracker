@@ -16,9 +16,11 @@
 - I WANT to be able to view and manage the departments, roles, and employees in my company
 - SO THAT I can organize and plan my business
 
-## Installation
+## Installation and Usage
 
-- 'npm install'
+- `clone repo`
+- `npm install`
+- `node server.js`
 
 ## Video Walkthrough
 
