@@ -1,57 +1,33 @@
-drop database if exists employees_db;
-
-create database employees_db;
-
-use employees_db;
-
-create table department(
-id int not null auto_increment,
-name varchar(50) not null,
-primary key (id)
-);
-
-insert into department (name)
-values ("Coding"), ("Graphics"), ("HR");
-
-update department
-set name = "Human Resources"
-where name = "HR";
-
-create table role(
-id int not null auto_increment,
-title varchar(50),
-salary decimal(10,2),
-department_id integer,
-primary key (id)
-);
-
-insert into role (title, salary)
-values ("Junior Developer", 75000), ("Senior Developer", 100000), ("Team Lead", 125000), ("Architect", 150000);
-
-create table employee(
-id int not null auto_increment,
-first_name varchar(50),
-last_name varchar(50),
-role_id integer,
-manager_id integer,
-primary key (id)
-);
-
-insert into employee (first_name, last_name, role_id, manager_id)
-values ("Paul", "Keldsen", 2, 2), ("Andre", "Diop", 3, 1),("Lisa", "Copeland", 6, 5);
-
-insert into employee (first_name, last_name, role_id, manager_id)
-values ("Jonathan", "Watson", 1, 1);
-
-update employee
-set last_name = "Alan"
-where first_name = "Paul";
-
-
-select * from department;
-select * from role;
-select * from employee;
-
-select employee.first_name, employee.last_name, role.title, role.salary
-from employee inner join role
-on employee.role_id = role.id;
+INSERT INTO department (name)
+VALUES ('Legal'),
+    ('Sales'),
+    ('Engineering');
+INSERT INTO roles (title, salary, department_id)
+VALUES ('Legal Team Lead', 250000, 1),
+    ('Lawyer', 170000, 1),
+    ('Sales Lead', 100000, 2),
+    ('Salesperson', 70000, 2),
+    ('Lead Engineer', 150000, 3),
+    ('Engineer', 120000, 3);
+INSERT INTO employee (
+        first_name,
+        last_name,
+        role_id,
+        manager_id,
+        manager_confirm
+    )
+VALUES ('Jerry', 'Underwood', 1, null, true),
+    ('Bob', 'Sheldon', 2, 1, false),
+    ('Jason', 'Mendoza', 2, 1, false),
+    ('Alex', 'Jackson', 3, null, true),
+    ('Peter', 'Makah', 4, 2, false),
+    ('Suzie', 'Alisson', 4, 2, false),
+    ('John', 'Winger', 4, 2, false),
+    ('Pete', 'McFall', 5, null, true),
+    ('Alexis', 'Caper', 6, 3, false),
+    ('Mason', 'Jacobson', 6, 3, false);
+INSERT INTO manager (first_name, last_name)
+SELECT first_name,
+    last_name
+FROM employee
+WHERE manager_confirm = 1;
