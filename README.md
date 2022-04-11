@@ -4,7 +4,8 @@
 
 - [Description](#description)
 - [User Story](#user-story)
-- [Installation](#installation)
+- [Installation and Usage](#installation-and-usage)
+- [Video Walkthrough](#video-walkthrough)
 
 ## Description
 
@@ -20,7 +21,9 @@
 
 - `clone repo`
 - `npm install`
-- `node server.js`
+- `mysql -u root -p`
+- `source schema.sql`
+- `node index.js`
 
 ## Video Walkthrough
 
