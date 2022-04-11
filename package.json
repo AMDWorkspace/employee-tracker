@@ -7,5 +7,23 @@
     "node": "^17.7.2",
     "node.js": "^0.0.1-security",
     "schema": "^0.2.1"
-  }
+  },
+  "name": "employee-tracker",
+  "description": "## Table of Contents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMDWorkspace/employee-tracker.git"
+  },
+  "author": "Alan Do",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AMDWorkspace/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/AMDWorkspace/employee-tracker#readme"
 }
