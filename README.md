@@ -5,6 +5,7 @@
 - [Description](#description)
 - [User Story](#user-story)
 - [Installation and Usage](#installation-and-usage)
+- [Screenshot](#screenshot)
 - [Video Walkthrough](#video-walkthrough)
 
 ## Description
@@ -24,6 +25,10 @@
 - `mysql -u root -p`
 - `source schema.sql`
 - `node index.js`
+
+## Screenshot
+
+![screenshot](https://github.com/AMDWorkspace/employee-tracker/blob/main/Assets/photos/employee-tracker-screenshot.jpg)
 
 ## Video Walkthrough
 
