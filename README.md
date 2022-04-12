@@ -32,4 +32,4 @@
 
 ## Video Walkthrough
 
--
+- https://github.com/AMDWorkspace/employee-tracker/blob/main/Assets/videos/employee-tracker-walkthrough.mov
