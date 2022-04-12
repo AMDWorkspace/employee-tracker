@@ -1,19 +1,17 @@
-
-   
 const inquirer = require('inquirer');
 
-// Inital Prompt - Main Menu
+// main menu
 const promptUser = () => {
     inquirer
 
-        // Prompt the user
+        // prompt the user
         .prompt({
             type: 'list',
             name: 'begin choices',
             message: 'What would you like to do? (Select on of the following)',
             choices: ['View All Employees', 'View All Employees By Department', 'View All Employees By Manager', 'Add Employee', 'Update Employee Role', 'View Departments', 'Add Department', 'View Roles', 'Add Role', 'View totalized budget', 'I am finished']
         })
-        // Take the data and use switch statements to decide what to do per option
+        // Take the data and use switch statements
         .then((data) => {
             switch (data['begin choices']) {
                 case 'View All Employees':
@@ -52,7 +50,7 @@ const promptUser = () => {
         })
 };
 
-// You must export your module before you require module for circular page being required
+// export your module before you require module
 module.exports = { promptUser }
 const { viewAllEmp, viewEmpByDep, viewEmpByMngt, addEmp, upEmp } = require('./lib/employee');
 const { viewDep, addDep } = require('./lib/department-methods');
